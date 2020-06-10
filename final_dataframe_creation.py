@@ -15,14 +15,6 @@ def create_one_df_per_league(transfers_newdict):
         league_df = pd.concat([one_season_transfers_df, league_df], ignore_index=True, sort=False)
     return league_df
 
-# def create_final_df(one_df__per_league, league_name):
-#     final_df = pd.DataFrame()
-#     one_df__per_league.loc[:, 'Liga'] = league_name
-#     final_df = pd.concat([one_df__per_league, final_df], sort=False)
-    
-    
-#     return final_df
-
 class MakeFinalDf():
     def __init__(self):
         self.final_df = pd.DataFrame()
