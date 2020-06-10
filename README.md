@@ -115,4 +115,4 @@ __Model Evaluation__
 __XGBoost__  
 https://xgboost.readthedocs.io/en/latest/  
   
-![Tableau screenshot](https://github.com/bluejurand/Photos-colorization/blob/master/Transfers_from_2009_2010_tableau_screenshot.png)
+![Tableau screenshot](https://github.com/bluejurand/Transfers_ekstraklasa_webscraping_tableau/blob/master/Transfers_from_2009_2010_tableau_screenshot.png)
