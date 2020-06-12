@@ -1,12 +1,11 @@
 # Transfers_ekstraklasa_webscraping_tableau
-![Build status]() 
 ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg) 
 ![Python 3.6](https://img.shields.io/badge/python-3.3-blue.svg) 
 ![Spyder 4.1.3](https://img.shields.io/badge/spyder-4.1.3-black) 
 ![BeautifulSoup 4.9.0](https://img.shields.io/badge/BeautifulSoup-4.9.0-blueviolet) 
 ![Requests 2.23.0](https://img.shields.io/badge/requests-2.23.0-gray) 
-![Pandas 0.22.0](https://img.shields.io/badge/pandas-0.22.0-green.svg) 
-Repository presenting Transfermarkt data () web scraping for 
+![Pandas 0.22.0](https://img.shields.io/badge/pandas-0.22.0-green.svg)  
+Repository presenting Transfermarkt data (https://www.transfermarkt.pl/) web scraping for 
 analysis of transfers in Polish ekstraklasa in years 2009/2010 - 2019/2020. 
 
 ## Motivation
