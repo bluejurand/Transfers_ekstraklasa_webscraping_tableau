@@ -28,6 +28,11 @@ Exemplary commands to install python libraries:
 	pip install pandas  
 	pip install bs4  
 
+__Running code__  
+Everything is executed from file main.py. Go to directory where code is downoladed and run a command: 
+
+	py main.py
+
 ## Code examples
 
 	# get_data_from_soup.py module
