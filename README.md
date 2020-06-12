@@ -1,20 +1,17 @@
 # Transfers_ekstraklasa_webscraping_tableau
-![Build status](https://travis-ci.org/bluejurand/Titanic-python.svg?branch=master) 
+![Build status]() 
 ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg) 
 ![Python 3.6](https://img.shields.io/badge/python-3.3-blue.svg) 
 ![Spyder 4.1.3](https://img.shields.io/badge/spyder-4.1.3-black) 
-![Scikit-learn 0.19.1](https://img.shields.io/badge/scikit_learn-0.19.1-orange.svg) 
+![BeautifulSoup 4.9.0](https://img.shields.io/badge/BeautifulSoup-4.9.0-blueviolet) 
+![Requests 2.23.0](https://img.shields.io/badge/requests-2.23.0-gray) 
 ![Pandas 0.22.0](https://img.shields.io/badge/pandas-0.22.0-green.svg) 
-![Numpy 1.12.1](https://img.shields.io/badge/numpy-1.12.1-yellow.svg) 
-![Scipy 1.0.0](https://img.shields.io/badge/scipy-1.0.0-blue.svg) 
-![Matplotlib 2.1.2](https://img.shields.io/badge/matplotlib-2.1.2-blue.svg) 
-![Seaborn 0.8.1](https://img.shields.io/badge/seaborn-0.8.1-black.svg)  
-Repository for Titanic-kaggle dataset, with data analysis and testing different classification algorithms.
-Link to original kaggle competition: https://www.kaggle.com/c/titanic
+Repository presenting Transfermarkt data () web scraping for 
+analysis of transfers in Polish ekstraklasa in years 2009/2010 - 2019/2020. 
 
 ## Motivation
 
-To practice webscraping and data visualization in Tableau. 
+To practice web scraping and data visualization in Tableau. 
 
 ## Installation
 
@@ -31,8 +28,7 @@ Exemplary commands to install python libraries:
 	pip install numpy  
 	pip install pandas  
 	pip install bs4  
-	pip install seaborn 
-	
+
 ## Code examples
 
 	# get_data_from_soup.py module
@@ -99,20 +95,11 @@ Exemplary commands to install python libraries:
 		return transfers_dict_one_season 
 
 ## Key Concepts
-__Machine Learning__  
+__Web scraping__  
 
-__Classification__  
+__Data visualization__  
 
-__Cross-Validation__  
-http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.train_test_split.html
-
-__Model Evaluation__  
-  -Scores  
-  -Classification reports  
-  -Visualization tools  
-  -Precision recall
-
-__XGBoost__  
-https://xgboost.readthedocs.io/en/latest/  
+__Data wrangling__  
   
 ![Tableau screenshot](https://github.com/bluejurand/Transfers_ekstraklasa_webscraping_tableau/blob/master/Transfers_from_2009_2010_tableau_screenshot.png)
+Link to Tableau Public file (dynamic version) - <https://public.tableau.com/views/Transfersekstraklasa09-20/Dashboard1?:display_count=y&publish=yes&:origin=viz_share_link>
