@@ -32,7 +32,6 @@ for league_name, league_link in transfermarkt_links.items():
     transfers_newdict = create_one_df_per_season(transfers_dict)
     one_df__per_league = create_one_df_per_league(transfers_newdict)
     one_df__per_league.to_csv('Transfers_{}_from_2009_2010.csv'.format(league_name))
-    
     final_df = final_df_instance.create_final_df(one_df__per_league, league_name)
-    
+
 final_df.to_csv('Transfers_all_leagues_from_2009_2010.csv'.format(league_name))

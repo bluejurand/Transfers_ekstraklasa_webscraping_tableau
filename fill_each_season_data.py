@@ -21,13 +21,16 @@ def fill_club_subtables(transfers_dict_one_season, soup):
     from fill_each_club_data import (fill_empty_columns, go_to_next_club, get_club_name,
                                      fill_dotyczy_klubu_column, MakeCounter, corect_column_names)
 
-    club_counter = 2
-    player_nationality_counter = MakeCounter()
+    club_counter = MakeCounter(2)
+    player_nationality_counter = MakeCounter(0)
+    player_nationality = soup.find_all(class_="zentriert nat-transfer-cell")
+    club_nat = soup.find_all(class_="no-border-links verein-flagge-transfer-cell")
+    club_country_counter = MakeCounter(0)
 
     for club_subtable_counter, _ in enumerate(transfers_dict_one_season):
 
         current_transfers_dict_copy = transfers_dict_one_season[club_subtable_counter][:]
-        current_transfers_dict_copy = fill_empty_columns(current_transfers_dict_copy, club_subtable_counter, player_nationality_counter, soup)
+        current_transfers_dict_copy = fill_empty_columns(current_transfers_dict_copy, club_subtable_counter, player_nationality_counter, player_nationality, club_nat, club_country_counter)
 
         club_counter = go_to_next_club(club_subtable_counter, club_counter)
         club_name = get_club_name(soup, club_counter)
