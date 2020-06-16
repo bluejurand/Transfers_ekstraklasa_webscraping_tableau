@@ -12,11 +12,19 @@ def check_if_player_have_next_club(table_counter, current_transfers_dict_copy, c
             club_header_type = 'Klub pozyskujący'
         return club_header_type
 
-    next_club_name = club_nat[club_country_counter.get_current_val()].find('a').text
+    def get_next_club_name(club_nat, club_country_counter):
+        next_club_name = club_nat[club_country_counter.get_current_val()].find('a').text
+        return next_club_name
+    
+    def get_next_club_country(club_nat, club_country_counter):
+        next_club_country = club_nat[club_country_counter.get_current_val()].find('img').get('title')
+        return next_club_country
+
+    next_club_name = get_next_club_name(club_nat, club_country_counter)
     club_header_type = check_transfer_type_club(club_subtable_counter)
 
     if not next_club_name in ['Nieznany', 'Bez klubu', 'Koniec kariery', 'Sperre', 'pauzuje']:
-        next_club_country = club_nat[club_country_counter.get_current_val()].find('img').get('title')
+        next_club_country = get_next_club_country(club_nat, club_country_counter)
         current_transfers_dict_copy.loc[table_counter, club_header_type] = next_club_country
     elif next_club_name == 'Nieznany':
         current_transfers_dict_copy.loc[table_counter, club_header_type] = 'Nieznana'

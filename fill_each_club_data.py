@@ -27,13 +27,18 @@ class MakeCounter():
 def fill_empty_columns(current_transfers_dict_copy, club_subtable_counter, player_nationality_counter, player_nationality, club_nat, club_country_counter):
     from fill_each_club_subtable_data import (get_player_nationality, check_transfer_type,
                                               check_if_player_have_next_club)
+    
+    def get_current_player_nationality(current_transfers_dict_copy, table_counter):
+        current_player_nationality = current_transfers_dict_copy.loc[table_counter, "Narodowość"]
+        return current_player_nationality
 
     for table_counter, _ in current_transfers_dict_copy.iterrows():
-        if not current_transfers_dict_copy.loc[table_counter, "Narodowość"] in ['Bez nabytków', 'Bez odejść']:
+        current_player_nationality = get_current_player_nationality(current_transfers_dict_copy, table_counter) 
+        if not current_player_nationality in ['Bez nabytków', 'Bez odejść']:
             current_transfers_dict_copy = check_if_player_have_next_club(table_counter, current_transfers_dict_copy, club_nat, club_country_counter, club_subtable_counter)
             club_country_counter()
             player_nationality_counter()
-        if not current_transfers_dict_copy.loc[table_counter, "Narodowość"] in ['b.i.', 'Bez nabytków', 'b.i.b.i.', 'Bez odejść']:
+        if not current_player_nationality in ['b.i.', 'Bez nabytków', 'b.i.b.i.', 'Bez odejść']:
             current_transfers_dict_copy.loc[table_counter, "Narodowość"] = get_player_nationality(player_nationality_counter, player_nationality)
         current_transfers_dict_copy.loc[table_counter, "Rodzaj transferu"] = check_transfer_type(club_subtable_counter)
 
