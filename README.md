@@ -1,4 +1,4 @@
-# Transfers_ekstraklasa_webscraping_tableau
+# Transfers ekstraklasa webscraping tableau
 ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg) 
 ![Python 3.6](https://img.shields.io/badge/python-3.3-blue.svg) 
 ![Spyder 4.1.3](https://img.shields.io/badge/spyder-4.1.3-black) 
