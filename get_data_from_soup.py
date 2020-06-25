@@ -1,6 +1,6 @@
 import bs4
 import requests
-from fill_each_season_data import wirte_tables_to_one_dictionary, fill_club_subtables
+from fill_each_season_data import wirte_tables_to_one_dictionary, fill_club_subtables, extract_transfer_table
 
 def create_data_for_one_league(transfers_dict, league_link):
     for season_counter, transfers_name in enumerate(transfers_dict):
@@ -14,8 +14,11 @@ def create_data_for_one_league(transfers_dict, league_link):
         res.raise_for_status()
         soup = bs4.BeautifulSoup(res.content, 'lxml')
         all_tables = soup.find_all('table')
+        
         current_season_dictionary = transfers_dict[transfers_name][:]
-        current_season_dictionary = wirte_tables_to_one_dictionary(all_tables, current_season_dictionary)
+        first_irrlevant_tables = 3
+        
+        current_season_dictionary = [ extract_transfer_table(table) for table in all_tables[first_irrlevant_tables:] ]
         current_season_dictionary = fill_club_subtables(current_season_dictionary, soup)
         transfers_dict[transfers_name] = current_season_dictionary
     return transfers_dict

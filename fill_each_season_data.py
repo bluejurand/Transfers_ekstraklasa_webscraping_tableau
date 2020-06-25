@@ -9,13 +9,9 @@ def create_empty_dataframe(first_season_year_start, last_season_year_start):
     transfers_dict = dict.fromkeys(list(names_for_yeach_season), [])
     return transfers_dict
 
-def wirte_tables_to_one_dictionary(tables, transfers_dict_one_season):
-    first_irrlevant_tables = 3
-    relevant_tables = tables[first_irrlevant_tables:]
-    for table in relevant_tables:
-        transfers_dataframe = pd.read_html(str(table))
-        transfers_dict_one_season.append(transfers_dataframe[0].dropna(thresh=3))
-    return transfers_dict_one_season
+def extract_transfer_table(table, thresh=3):
+    transfers_table, *_ = pd.read_html(str(table))
+    return transfers_table.dropna(thresh=thresh)
 
 def fill_club_subtables(transfers_dict_one_season, soup):
     from fill_each_club_data import (fill_empty_columns, go_to_next_club, get_club_name,
