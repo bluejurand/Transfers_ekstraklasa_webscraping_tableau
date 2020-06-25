@@ -29,9 +29,13 @@ Exemplary commands to install python libraries:
 	pip install bs4  
 
 __Running code__  
-Everything is executed from file main.py. Go to directory where code is downoladed and run a command: 
+Everything is executed from file main.py. Go to directory where code is downoladed"\source_code\" and run a command: 
 
 	py main.py
+	
+
+Links to transfermarkt web pages and corresponding to them league names are in files in folder "..\input_files\". 
+Resulting csv files for every league and one combining all data together are saved in folder "..\output_files\".
 
 ## Code examples
 
