@@ -1,0 +1,9 @@
+polish_league
+germany_league
+ukrainian_league
+czech_league
+slovakian_league
+romanian_league
+hungarian_league
+austrian_league
+russian_league
