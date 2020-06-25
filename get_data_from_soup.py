@@ -1,6 +1,6 @@
 import bs4
 import requests
-from fill_each_season_data import wirte_tables_to_one_dictionary, fill_club_subtables, extract_transfer_table
+from fill_each_season_data import fill_club_subtables, extract_transfer_table
 
 def create_data_for_one_league(transfers_dict, league_link):
     for season_counter, transfers_name in enumerate(transfers_dict):
