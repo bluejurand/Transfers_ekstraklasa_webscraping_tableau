@@ -6,11 +6,7 @@
 ![Requests 2.23.0](https://img.shields.io/badge/requests-2.23.0-gray) 
 ![Pandas 0.22.0](https://img.shields.io/badge/pandas-0.22.0-green.svg)  
 Repository presenting Transfermarkt data (https://www.transfermarkt.pl/) web scraping for 
-analysis of transfers in Polish ekstraklasa in years 2009/2010 - 2019/2020. 
-
-##blabla test
-
-##blabla test2
+analysis of transfers in Polish ekstraklasa in years 2009/2010 - 2019/2020.
 
 ## Motivation
 
